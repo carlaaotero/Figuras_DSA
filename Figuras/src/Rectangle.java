@@ -8,6 +8,6 @@ public class Rectangle extends Figura {
 
     @Override
     public double area() {
-        return l1+l2;
+        return l1*l2;
     }
 }
