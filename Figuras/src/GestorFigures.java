@@ -20,7 +20,7 @@ public class GestorFigures {
         System.out.println();
         System.out.println("Ordre d'àrees de petit a gran:");
         for (Figura f:v)
-            System.out.println(f.area());
+            System.out.println(f.area() +"m\u00B2");
     }
 
     public static void main(String[] args) {
@@ -33,19 +33,16 @@ public class GestorFigures {
 
         double res = suma(v);
 
-        System.out.println("Rectangle: "+v[0].area());
-        System.out.println("Cercle: "+v[1].area());
-        System.out.println("Quadrat: "+v[2].area());
-        System.out.println("Triangle: "+v[3].area());
+        //passar per pantalla l'àrea de cada figura
+        System.out.println("Rectangle: "+v[0].area() + "m\u00B2");
+        System.out.println("Cercle: "+v[1].area() + "m\u00B2");
+        System.out.println("Quadrat: "+v[2].area()+ "m\u00B2");
+        System.out.println("Triangle: "+v[3].area()+ "m\u00B2");
 
         System.out.println();
-        System.out.println("Suma: "+res);
 
-        //print(v);
-
+        //passar per pantalla la suma de les àrees
+        System.out.println("Suma: "+res + "m\u00B2");
         sort(v);
-
-        //print(v);
-
     }
 }

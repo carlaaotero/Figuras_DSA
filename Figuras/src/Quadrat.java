@@ -1,6 +1,5 @@
 public class Quadrat extends Rectangle{
 
-    public Quadrat(int i) {
-        super(i,i);
+    public Quadrat(int i) {super(i,i);
     }
 }
