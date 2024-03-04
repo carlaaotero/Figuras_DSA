@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class GestorFigures {
     public static double suma(Figura[] v) {
         double suma = 0;
@@ -7,7 +10,14 @@ public class GestorFigures {
     }
     //funció per ordenar figures
     public static void sort (Figura[] v){
-        for (int i = 0; i < v.length-1; i++){
+        Arrays.sort(v);
+        Arrays.sort(v, new Comparator<Figura>() {
+            @Override
+            public int compare(Figura o1, Figura o2) {
+                return Double.compare(o1.area(), o2.area());
+            }
+        });
+        /*for (int i = 0; i < v.length-1; i++){
             int j = i;
             for (int n= i+1; n<v.length; n++){
                 if (v[n].area() < v[j].area()){
@@ -16,7 +26,7 @@ public class GestorFigures {
             }
             Figura temp = v[i];
             v[i] = v[j] = temp;
-        }
+        }*/
         System.out.println();
         System.out.println("Ordre d'àrees de petit a gran:");
         for (Figura f:v)
